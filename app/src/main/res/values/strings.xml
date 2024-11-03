@@ -1,3 +1,85 @@
 <resources>
     <string name="app_name">Projek Mobile Lab</string>
+
+    <string-array name="sex_options">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="yes_no_options">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="bmi_options">
+        <item>&lt;18.5</item>
+        <item>18.5-24.9</item>
+        <item>25-29.9</item>
+        <item>&gt;=30</item>
+    </string-array>
+
+    <string-array name="outlook_options">
+        <item>Optimistic</item>
+        <item>Neutral</item>
+        <item>Pessimistic</item>
+    </string-array>
+
+    <string-array name="alcohol_options">
+        <item>Never</item>
+        <item>Occasionally</item>
+        <item>Frequently</item>
+    </string-array>
+
+    <string-array name="country_options">
+        <item>USA</item>
+        <item>Canada</item>
+        <item>Japan</item>
+        <item>India</item>
+        <item>Australia</item>
+        <item>Germany</item>
+        <item>France</item>
+        <item>UK</item>
+        <item>Italy</item>
+        <item>Spain</item>
+        <item>China</item>
+        <item>Brazil</item>
+        <item>Mexico</item>
+        <item>Russia</item>
+        <item>South Korea</item>
+        <item>Netherlands</item>
+        <item>Sweden</item>
+        <item>Norway</item>
+        <item>Denmark</item>
+        <item>Finland</item>
+        <item>Singapore</item>
+        <item>New Zealand</item>
+        <item>Ireland</item>
+        <item>Saudi Arabia</item>
+        <item>South Africa</item>
+        <item>Argentina</item>
+        <item>Indonesia</item>
+        <item>Thailand</item>
+        <item>Philippines</item>
+        <item>Vietnam</item>
+        <item>Pakistan</item>
+        <item>Bangladesh</item>
+        <item>Egypt</item>
+        <item>Turkey</item>
+        <item>Ukraine</item>
+        <item>Colombia</item>
+        <item>Chile</item>
+    </string-array>
+
+    <string-array name="fitness_levels">
+        <item>Low</item>
+        <item>Moderate</item>
+        <item>High</item>
+    </string-array>
+
+    <string-array name="diet_ratings">
+        <item>Poor</item>
+        <item>Average</item>
+        <item>Good</item>
+    </string-array>
+
 </resources>

@@ -2,19 +2,206 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:padding="16dp" >
+    android:padding="16dp">
 
-    <EditText
-        android:id="@+id/inputText"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter your message"
-        android:padding="12dp"
-        android:layout_marginBottom="10dp"
-        android:background="@android:drawable/editbox_background" />
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Describe your daily activity"
+                android:textSize="20sp"
+                android:padding="8dp"
+                android:textColor="#000000" />
+
+
+            <EditText
+                android:id="@+id/inputText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your message"
+                android:padding="12dp"
+                android:layout_marginBottom="10dp"
+                android:background="@android:drawable/editbox_background" />
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date of Birth*" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/monthInput"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint="Month" />
+
+                <EditText
+                    android:id="@+id/dayInput"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint="Day" />
+
+                <EditText
+                    android:id="@+id/yearInput"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint="Year" />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sex*" />
+
+            <Spinner
+                android:id="@+id/sexSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/sex_options" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Do you smoke?" />
+
+            <Spinner
+                android:id="@+id/smokingSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/yes_no_options" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BMI*" />
+
+            <Spinner
+                android:id="@+id/bmiSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/bmi_options" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Outlook" />
+
+            <Spinner
+                android:id="@+id/outlookSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/outlook_options" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alcohol Consumption" />
+
+            <Spinner
+                android:id="@+id/alcoholSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/alcohol_options" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Country*" />
+
+            <Spinner
+                android:id="@+id/countrySpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/country_options" />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Level of Fitness" />
+
+            <Spinner
+                android:id="@+id/fitnessSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/fitness_levels" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diet Rating" />
+
+            <Spinner
+                android:id="@+id/dietSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/diet_ratings" />
+
+
+            <TextView
+                android:id="@+id/outputText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:textSize="18sp"
+                android:textColor="#000"
+                android:layout_marginTop="10dp"
+                android:background="#f0f0f0" />
+
+            <TextView
+                android:id="@+id/outputText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:textSize="18sp"
+                android:textColor="#000"
+                android:layout_marginTop="10dp"
+                android:background="#f0f0f0" />
+
+            <Button
+                android:id="@+id/gotoActivity2Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Go to Activity 2"
+                android:layout_marginTop="8dp" />
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
 
     <Button
         android:id="@+id/sendButton"
@@ -22,14 +209,6 @@
         android:layout_height="wrap_content"
         android:text="Send" />
 
-    <TextView
-        android:id="@+id/outputText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="12dp"
-        android:textSize="18sp"
-        android:textColor="#000"
-        android:layout_marginTop="20dp"
-        android:background="#f0f0f0" />
+
 
 </LinearLayout>
