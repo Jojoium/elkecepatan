@@ -1,5 +1,6 @@
 package com.example.projekmobilekelas
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
@@ -76,6 +77,12 @@ class MainActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this@MainActivity, "Please fill all required fields", Toast.LENGTH_SHORT).show()
             }
+        }
+
+        val gotoActivity2Button: Button = findViewById(R.id.gotoActivity2Button)
+        gotoActivity2Button.setOnClickListener {
+            val intent = Intent(this, MainActivity2::class.java)
+            startActivity(intent)
         }
     }
 

@@ -186,6 +186,13 @@
                 android:layout_marginTop="10dp"
                 android:background="#f0f0f0" />
 
+            <Button
+                android:id="@+id/gotoActivity2Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Go to Activity 2"
+                android:layout_marginTop="8dp" />
+
 
 
         </LinearLayout>
@@ -201,5 +208,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Send" />
+
+
 
 </LinearLayout>
