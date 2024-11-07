@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -21,16 +22,13 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        // Inisialisasi Firebase
         mAuth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()
 
-        // Inisialisasi View
         etEmail = findViewById(R.id.etEmail)
         etPassword = findViewById(R.id.etPassword)
         btnLogin = findViewById(R.id.btnlogin)
 
-        // Set OnClickListener untuk tombol login
         btnLogin.setOnClickListener {
             val email = etEmail.text.toString().trim()
             val password = etPassword.text.toString().trim()
@@ -40,6 +38,12 @@ class LoginActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Email dan Password wajib diisi!", Toast.LENGTH_SHORT).show()
             }
+        }
+        // Inisialisasi TextView untuk berpindah ke SignUpActivity
+        val tvSignUp = findViewById<TextView>(R.id.tvSignUp)
+        tvSignUp.setOnClickListener {
+            val intent = Intent(this, SignUpActivity::class.java)
+            startActivity(intent)
         }
     }
 
