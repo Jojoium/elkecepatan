@@ -61,6 +61,12 @@ class MainActivity2 : AppCompatActivity() {
             }
         }
 
+        val gotoActivity3Button: Button = findViewById(R.id.gotoActivity3Button)
+        gotoActivity3Button.setOnClickListener {
+            val intent = Intent(this, MainActivity3::class.java)
+            startActivity(intent)
+        }
+
 
     }
 

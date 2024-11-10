@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity2"
+    tools:context=".MainActivity3"
     android:fillViewport="true">
 
     <LinearLayout
@@ -12,7 +12,7 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-
+        <!-- Welcome Message -->
         <TextView
             android:id="@+id/welcomeTextView"
             android:layout_width="wrap_content"
@@ -21,7 +21,7 @@
             android:textSize="18sp"
             android:padding="8dp" />
 
-
+        <!-- Input Text for User Message -->
         <EditText
             android:id="@+id/inputText"
             android:layout_width="match_parent"
@@ -31,91 +31,140 @@
             android:layout_marginBottom="10dp"
             android:background="@android:drawable/editbox_background" />
 
-
+        <!-- Parameter Section -->
+        <!-- Intensitas Perasaan -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Seberapa sering Anda merasa kelelahan?"
+            android:text="Seberapa intens perasaan negatif yang Anda rasakan?"
             android:layout_marginTop="10dp" />
         <SeekBar
-            android:id="@+id/fatigueSeekBar"
+            android:id="@+id/intensitasSeekBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:max="4" />
 
-
+        <!-- Durasi Perasaan -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Seberapa parah nyeri yang Anda rasakan?"
+            android:text="Seberapa lama perasaan ini berlangsung?"
             android:layout_marginTop="10dp" />
         <SeekBar
-            android:id="@+id/painSeekBar"
+            android:id="@+id/durasiSeekBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:max="4" />
 
-
+        <!-- Frekuensi Perasaan Negatif -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Seberapa sering Anda merasa mual?"
+            android:text="Seberapa sering Anda merasakan perasaan negatif?"
             android:layout_marginTop="10dp" />
         <SeekBar
-            android:id="@+id/nauseaSeekBar"
+            android:id="@+id/frekuensiSeekBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:max="4" />
 
-
+        <!-- Pengaruh pada Aktivitas Harian -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Seberapa sering Anda merasa sesak napas?"
+            android:text="Seberapa besar perasaan ini mengganggu aktivitas harian Anda?"
             android:layout_marginTop="10dp" />
         <SeekBar
-            android:id="@+id/breathSeekBar"
+            android:id="@+id/keseharianSeekBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:max="4" />
 
-
+        <!-- Pola Berpikir Negatif -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Seberapa sering Anda merasa pusing?"
+            android:text="Seberapa sering Anda memiliki pola berpikir negatif tentang diri sendiri?"
             android:layout_marginTop="10dp" />
         <SeekBar
-            android:id="@+id/dizzinessSeekBar"
+            android:id="@+id/polaNegatifSeekBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:max="4" />
 
-
+        <!-- Ketakutan Berlebihan -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Seberapa besar kehilangan nafsu makan yang Anda alami?"
+            android:text="Seberapa sering Anda merasa takut pada situasi tanpa alasan jelas?"
             android:layout_marginTop="10dp" />
         <SeekBar
-            android:id="@+id/appetiteSeekBar"
+            android:id="@+id/ketakutanSeekBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:max="4" />
 
-
+        <!-- Kesulitan Berkonsentrasi -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Seberapa lemah Anda merasa?"
+            android:text="Seberapa sering Anda kesulitan berkonsentrasi atau fokus?"
             android:layout_marginTop="10dp" />
         <SeekBar
-            android:id="@+id/weaknessSeekBar"
+            android:id="@+id/konsentrasiSeekBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:max="4" />
 
+        <!-- Kelelahan Berlebih -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seberapa sering Anda merasa kelelahan berlebih?"
+            android:layout_marginTop="10dp" />
+        <SeekBar
+            android:id="@+id/kelelahanSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="4" />
 
+        <!-- Gangguan Tidur -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seberapa sering Anda mengalami gangguan tidur?"
+            android:layout_marginTop="10dp" />
+        <SeekBar
+            android:id="@+id/tidurSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="4" />
+
+        <!-- Penurunan Minat pada Aktivitas -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seberapa besar penurunan minat Anda pada aktivitas yang biasanya disukai?"
+            android:layout_marginTop="10dp" />
+        <SeekBar
+            android:id="@+id/minatSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="4" />
+
+        <!-- Isolasi Sosial -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seberapa sering Anda menghindari interaksi sosial?"
+            android:layout_marginTop="10dp" />
+        <SeekBar
+            android:id="@+id/isolasiSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="4" />
+
+        <!-- Send Button -->
         <Button
             android:id="@+id/sendButton"
             android:layout_width="match_parent"
@@ -123,7 +172,7 @@
             android:text="Kirim"
             android:layout_marginTop="16dp" />
 
-
+        <!-- TextView for Output (Response from AI) -->
         <TextView
             android:id="@+id/outputText"
             android:layout_width="match_parent"
@@ -142,12 +191,6 @@
             android:layout_marginTop="16dp"
             android:textSize="16sp"/>
 
-        <Button
-            android:id="@+id/gotoActivity3Button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Go to Activity 3"
-            android:layout_marginTop="8dp" />
 
 
 
