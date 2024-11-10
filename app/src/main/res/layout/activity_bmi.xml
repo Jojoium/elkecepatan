@@ -1,120 +1,211 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@drawable/stylesbuttons"
     android:padding="16dp">
 
     <!-- Title -->
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="808dp"
+        android:layout_height="1006dp"
+        android:src="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.3"
+        app:layout_constraintHorizontal_bias="0.327"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/classResultTextView"
+        app:layout_constraintVertical_bias="0.973"
+        app:layout_constraintWidth_percent="0.9" />
+
+    <!-- Age -->
+
+    <!-- Gender -->
+
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="53dp"
+        android:layout_marginTop="16dp"
+        android:background="#00FFFFFF"
+        android:paddingBottom="20dp"
         android:text="Calculator BMI"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:layout_gravity="center_horizontal"
-        android:paddingBottom="20dp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Age -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Umur" />
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:text="Umur"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
     <EditText
         android:id="@+id/ageEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="439dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/bg_edittext"
         android:inputType="number"
-        android:background="@drawable/bg_edittext" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.32"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
 
-    <!-- Gender -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        android:paddingTop="10dp"
         android:text="Gender"
-        android:paddingTop="10dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ageEditText" />
+
     <RadioGroup
         android:id="@+id/genderRadioGroup"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ageEditText">
 
-        <RadioButton
-            android:id="@+id/maleRadioButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Laki-Laki" />
-
-        <RadioButton
-            android:id="@+id/femaleRadioButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Perempuan" />
     </RadioGroup>
 
     <!-- Height -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tinggi" />
-    <EditText
-        android:id="@+id/heightEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:hint="cm"
-        android:background="@drawable/bg_edittext" />
 
     <!-- Weight -->
+
+    <!-- Calculate Button -->
+
+    <!-- Result BMI -->
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Berat" />
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
+        android:text="Tinggi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/genderRadioGroup" />
+
+    <EditText
+        android:id="@+id/heightEditText"
+        android:layout_width="444dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/bg_edittext"
+        android:hint="cm"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/genderRadioGroup" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Berat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/heightEditText" />
+
     <EditText
         android:id="@+id/weightEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
+        android:layout_width="441dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/bg_edittext"
         android:hint="kg"
-        android:background="@drawable/bg_edittext" />
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/heightEditText" />
 
-    <!-- Calculate Button -->
     <Button
         android:id="@+id/calculateButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hitung"
-        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
         android:backgroundTint="#3B6CEB"
-        android:textColor="#FFFFFF"
         android:padding="10dp"
-        android:layout_marginTop="10dp" />
-
-    <!-- Result BMI -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="BMI" />
-    <TextView
-        android:id="@+id/bmiResultTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bg_result"
-        android:textSize="18sp"
-        android:gravity="center" />
+        android:text="Hitung"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weightEditText" />
 
     <!-- Result Class -->
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Kelas" />
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:text="BMI"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calculateButton" />
+
+    <TextView
+        android:id="@+id/bmiResultTextView"
+        android:layout_width="432dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/bg_result"
+        android:gravity="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calculateButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:text="Kelas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bmiResultTextView" />
+
     <TextView
         android:id="@+id/classResultTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="431dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/bg_result"
+        android:gravity="center"
         android:textSize="18sp"
-        android:gravity="center" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bmiResultTextView" />
 
-</LinearLayout>
+    <RadioButton
+        android:id="@+id/femaleRadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Perempuan"
+        tools:layout_editor_absoluteX="103dp"
+        tools:layout_editor_absoluteY="164dp" />
+
+    <RadioButton
+        android:id="@+id/maleRadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Laki-Laki"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="164dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
