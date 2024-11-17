@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Projek Mobile Lab</string>
+    <string name="app_name">DeadClock</string>
 
     <string-array name="sex_options">
         <item>Male</item>

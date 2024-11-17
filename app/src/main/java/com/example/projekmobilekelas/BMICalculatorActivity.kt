@@ -4,6 +4,7 @@ package com.example.bmi
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.example.projekmobilekelas.R
 
 class MainActivity : AppCompatActivity() {
 
