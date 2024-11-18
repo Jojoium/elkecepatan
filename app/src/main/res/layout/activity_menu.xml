@@ -1,0 +1,54 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kalkulator Kematian"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btn_life_expectancy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Life Expectancy Calculator"
+        android:backgroundTint="#B2C8FF"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btn_bmi_calculator"
+        android:layout_width="209dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#B2C8FF"
+        android:text="BMI Calculator"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:id="@+id/btn_disease_prediction"
+        android:layout_width="244dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#B2C8FF"
+        android:text="Disease Prediction"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#B2C8FF"
+        android:text="Log Out"
+        android:textColor="@android:color/black" />
+
+</LinearLayout>
