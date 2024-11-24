@@ -4,6 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 
 class MainActivity2 : AppCompatActivity() {
 
@@ -11,7 +13,9 @@ class MainActivity2 : AppCompatActivity() {
     private lateinit var outputText: TextView
     private lateinit var outputText2: TextView
     private lateinit var sendButton: Button
-
+    private lateinit var welcomeTextView: TextView
+    private lateinit var mAuth: FirebaseAuth
+    private lateinit var db: FirebaseFirestore
     // SeekBars for each physical symptom
     private lateinit var fatigueSeekBar: SeekBar
     private lateinit var painSeekBar: SeekBar
@@ -74,6 +78,32 @@ class MainActivity2 : AppCompatActivity() {
         gotoActivity3Button.setOnClickListener {
             val intent = Intent(this, MainActivity3::class.java)
             startActivity(intent)
+        }
+        welcomeTextView = findViewById(R.id.welcomeTextView)
+        mAuth = FirebaseAuth.getInstance()
+        db = FirebaseFirestore.getInstance()
+
+        // Fetch user data
+        val currentUser = mAuth.currentUser
+        if (currentUser != null) {
+            val userId = currentUser.uid
+            db.collection("users").document(userId)
+                .get()
+                .addOnSuccessListener { document ->
+                    if (document != null && document.exists()) {
+                        val username = document.getString("username")
+                        welcomeTextView.text = "Selamat datang, $username!"
+                    } else {
+                        welcomeTextView.text = "Selamat datang!"
+                        Toast.makeText(this, "Data pengguna tidak ditemukan", Toast.LENGTH_SHORT).show()
+                    }
+                }
+                .addOnFailureListener { e ->
+                    Toast.makeText(this, "Gagal memuat data: ${e.message}", Toast.LENGTH_SHORT).show()
+                }
+        } else {
+            welcomeTextView.text = "Selamat datang, Pengguna!"
+            Toast.makeText(this, "Pengguna tidak login", Toast.LENGTH_SHORT).show()
         }
     }
 

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DeadClock</string>
+    <string name="app_name">LifeAI</string>
 
     <string-array name="sex_options">
         <item>Male</item>

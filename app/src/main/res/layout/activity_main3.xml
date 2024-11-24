@@ -17,7 +17,6 @@
             android:id="@+id/welcomeTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Selamat datang, Pengguna!"
             android:textSize="18sp"
             android:padding="8dp" />
 
