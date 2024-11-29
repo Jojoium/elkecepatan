@@ -16,9 +16,7 @@
         <activity
             android:name=".Main_Menu"
             android:exported="false" />
-        <activity
-            android:name=".MainMenu"
-            android:exported="false" /> <!-- Activity Declarations -->
+
         <activity
             android:name=".DiseasePrediction"
             android:exported="false" />

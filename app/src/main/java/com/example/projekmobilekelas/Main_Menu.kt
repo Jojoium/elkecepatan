@@ -20,9 +20,9 @@ class Main_Menu : AppCompatActivity() {
 
         // Set click listeners
         btnBMICalculator.setOnClickListener { navigateTo(BMICalculatorActivity::class.java) }
-        btnDiseasePrediction.setOnClickListener { navigateTo(DiseasePrediction::class.java) }
-        btnLifeExpectancy.setOnClickListener { navigateTo(LifeExpectancyCalculator::class.java) }
-        btnMentalDisorderPrediction.setOnClickListener { navigateTo(MentalDisorderPrediction::class.java) }
+        btnDiseasePrediction.setOnClickListener { navigateTo(MainActivity2::class.java) }
+        btnLifeExpectancy.setOnClickListener { navigateTo(MainActivity::class.java) }
+        btnMentalDisorderPrediction.setOnClickListener { navigateTo(MainActivity3::class.java) }
         btnLogout.setOnClickListener { logout() }
     }
 
