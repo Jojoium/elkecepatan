@@ -1,4 +1,4 @@
-package com.example.bmi
+package com.example.projekmobilekelas
 
 
 import android.os.Bundle
@@ -6,7 +6,7 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.example.projekmobilekelas.R
 
-class MainActivity : AppCompatActivity() {
+class BMICalculatorActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -68,7 +68,7 @@ class LoginActivity : AppCompatActivity() {
                     Toast.makeText(this, "Login berhasil!", Toast.LENGTH_SHORT).show()
 
                     // Pindah ke MainActivity
-                    val intent = Intent(this, MainActivity::class.java)
+                    val intent = Intent(this, Main_Menu::class.java)
                     startActivity(intent)
                     finish() // Tutup LoginActivity agar tidak bisa kembali dengan tombol back
                 } else {

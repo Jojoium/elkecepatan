@@ -14,9 +14,17 @@
         android:theme="@style/Theme.AppCompat.Light"
         tools:targetApi="31">
         <activity
-            android:name=".MainMenu"
+            android:name=".Main_Menu"
             android:exported="false" />
-        <!-- Activity Declarations -->
+        <activity
+            android:name=".MainMenu"
+            android:exported="false" /> <!-- Activity Declarations -->
+        <activity
+            android:name=".DiseasePrediction"
+            android:exported="false" />
+        <activity
+            android:name=".BMICalculatorActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity3"
             android:exported="false" />

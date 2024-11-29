@@ -1,235 +1,236 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ScrollView
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#F5F5F5"
         android:padding="16dp"
-        android:background="#F5F5F5">
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="101dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp"
-            android:background="#FFFFFF"
             android:layout_margin="8dp"
-            android:elevation="4dp">
+            android:background="#FFFFFF"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="16dp">
 
             <!-- Header -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="DISEASE PREDICTION"
-                android:textSize="22sp"
-                android:textStyle="bold"
-                android:textColor="#3B82F6"
+                android:layout_gravity="center"
                 android:layout_marginBottom="16dp"
-                android:layout_gravity="center" />
+                android:text="DISEASE PREDICTION"
+                android:textColor="#3B82F6"
+                android:textSize="22sp"
+                android:textStyle="bold" />
 
             <!-- Divider -->
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#E0E0E0"
-                android:layout_marginBottom="16dp" />
+                android:layout_marginBottom="16dp"
+                android:background="#E0E0E0" />
 
             <!-- Umur -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
                 android:text="Umur"
-                android:textSize="16sp"
                 android:textColor="#000000"
-                android:layout_marginBottom="8dp" />
+                android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/et_age"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+            
                 android:hint="Masukkan umur Anda"
                 android:inputType="number"
-                android:padding="12dp"
-                android:background=""
-                android:layout_marginBottom="16dp" />
+                android:padding="12dp" />
 
             <!-- Gender -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
                 android:text="Gender"
-                android:textSize="16sp"
                 android:textColor="#000000"
-                android:layout_marginBottom="8dp" />
+                android:textSize="16sp" />
 
             <RadioGroup
                 android:id="@+id/rg_gender"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="16dp">
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/rb_male"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Laki-Laki"
                     android:buttonTint="#3B82F6"
+                    android:text="Laki-Laki"
                     android:textColor="#000000" />
 
                 <RadioButton
                     android:id="@+id/rb_female"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Perempuan"
+                    android:layout_marginLeft="20dp"
                     android:buttonTint="#3B82F6"
-                    android:textColor="#000000"
-                    android:layout_marginLeft="20dp" />
+                    android:text="Perempuan"
+                    android:textColor="#000000" />
             </RadioGroup>
 
             <!-- Divider -->
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#E0E0E0"
-                android:layout_marginBottom="16dp" />
+                android:layout_marginBottom="16dp"
+                android:background="#E0E0E0" />
 
             <!-- BMI -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
                 android:text="BMI"
-                android:textSize="16sp"
                 android:textColor="#000000"
-                android:layout_marginBottom="8dp" />
+                android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/et_bmi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+
                 android:hint="Masukkan BMI Anda"
                 android:inputType="numberDecimal"
-                android:padding="12dp"
-                android:background=""
-                android:layout_marginBottom="16dp" />
+                android:padding="12dp" />
 
             <!-- Divider -->
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#E0E0E0"
-                android:layout_marginBottom="16dp" />
+                android:layout_marginBottom="16dp"
+                android:background="#E0E0E0" />
 
             <!-- Riwayat Penyakit -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
                 android:text="Riwayat Penyakit"
-                android:textSize="16sp"
                 android:textColor="#000000"
-                android:layout_marginBottom="8dp" />
+                android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/et_medical_history"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
                 android:hint="Masukkan Riwayat Penyakit"
-                android:padding="12dp"
-                android:background=""
-                android:layout_marginBottom="16dp" />
+                android:padding="12dp" />
 
             <!-- Divider -->
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#E0E0E0"
-                android:layout_marginBottom="16dp" />
+                android:layout_marginBottom="16dp"
+                android:background="#E0E0E0" />
 
             <!-- Tingkat Stres -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
                 android:text="Tingkat Stres"
-                android:textSize="16sp"
                 android:textColor="#000000"
-                android:layout_marginBottom="8dp" />
+                android:textSize="16sp" />
 
             <RadioGroup
                 android:id="@+id/rg_stress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="16dp">
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/rb_stress_low"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Biasa"
                     android:buttonTint="#3B82F6"
+                    android:text="Biasa"
                     android:textColor="#000000" />
 
                 <RadioButton
                     android:id="@+id/rb_stress_medium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Sedang"
+                    android:layout_marginLeft="20dp"
                     android:buttonTint="#3B82F6"
-                    android:textColor="#000000"
-                    android:layout_marginLeft="20dp" />
+                    android:text="Sedang"
+                    android:textColor="#000000" />
 
                 <RadioButton
                     android:id="@+id/rb_stress_high"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tinggi"
+                    android:layout_marginLeft="20dp"
                     android:buttonTint="#3B82F6"
-                    android:textColor="#000000"
-                    android:layout_marginLeft="20dp" />
+                    android:text="Tinggi"
+                    android:textColor="#000000" />
             </RadioGroup>
 
             <!-- Divider -->
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#E0E0E0"
-                android:layout_marginBottom="16dp" />
+                android:layout_marginBottom="16dp"
+                android:background="#E0E0E0" />
 
             <!-- Pola Makan -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
                 android:text="Pola Makan"
-                android:textSize="16sp"
                 android:textColor="#000000"
-                android:layout_marginBottom="8dp" />
+                android:textSize="16sp" />
 
             <RadioGroup
                 android:id="@+id/rg_diet"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="16dp">
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/rb_diet_healthy"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Sehat"
                     android:buttonTint="#3B82F6"
+                    android:text="Sehat"
                     android:textColor="#000000" />
 
                 <RadioButton
                     android:id="@+id/rb_diet_unhealthy"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tidak Sehat"
+                    android:layout_marginLeft="20dp"
                     android:buttonTint="#3B82F6"
-                    android:textColor="#000000"
-                    android:layout_marginLeft="20dp" />
+                    android:text="Tidak Sehat"
+                    android:textColor="#000000" />
             </RadioGroup>
 
             <!-- Button Calculate -->
@@ -237,16 +238,15 @@
                 android:id="@+id/btn_calculate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Hitung"
+                android:layout_marginTop="16dp"
                 android:backgroundTint="#3B82F6"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
                 android:padding="12dp"
-                android:layout_marginTop="16dp" />
+                android:text="Hitung"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
 
         </LinearLayout>
     </ScrollView>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

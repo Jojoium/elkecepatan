@@ -3,7 +3,7 @@ package com.example.projekmobilekelas.utils
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import.android.R
+import com.example.projekmobilekelas.R
 
 class PredictionActivity : AppCompatActivity() {
 
