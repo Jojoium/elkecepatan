@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FEF8F8">
 
-    <!-- Layout utama -->
+    <!-- Main Content -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -23,6 +24,7 @@
             android:textStyle="bold"
             android:layout_marginBottom="16dp" />
 
+        <!-- Scrollable Content -->
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -39,7 +41,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Describe your daily activity"
+                    android:text="Jelaskan Aktivitas Keseharianmu"
                     android:textSize="18sp"
                     android:layout_marginBottom="4dp"
                     android:textColor="#333333" />
@@ -57,7 +59,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Date of Birth*"
+                    android:text="Tanggal Lahir*"
                     android:layout_marginBottom="4dp"
                     android:textSize="16sp"
                     android:textColor="#333333" />
@@ -73,7 +75,7 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:hint="Month"
+                        android:hint="Bulan"
                         android:background="@drawable/rounded_edittext"
                         android:padding="12dp"
                         android:layout_marginEnd="8dp" />
@@ -83,7 +85,7 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:hint="Day"
+                        android:hint="Hari"
                         android:background="@drawable/rounded_edittext"
                         android:padding="12dp"
                         android:layout_marginEnd="8dp" />
@@ -93,16 +95,16 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:hint="Year"
+                        android:hint="Tahun"
                         android:background="@drawable/rounded_edittext"
                         android:padding="12dp" />
                 </LinearLayout>
 
-                <!-- Dropdown Spinners -->
+                <!-- Spinners and Text Inputs -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Sex*"
+                    android:text="Jenis Kelamin*"
                     android:layout_marginBottom="4dp"
                     android:textSize="16sp" />
 
@@ -113,12 +115,12 @@
                     android:background="@drawable/rounded_spinner"
                     android:padding="8dp"
                     android:layout_marginBottom="16dp"
-                    android:entries="@array/sex_options"/>
+                    android:entries="@array/sex_options" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Do you smoke?"
+                    android:text="Apakah Anda Merokok?"
                     android:layout_marginBottom="4dp"
                     android:textSize="16sp" />
 
@@ -146,6 +148,7 @@
                     android:padding="8dp"
                     android:layout_marginBottom="16dp"
                     android:entries="@array/bmi_options" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -160,12 +163,12 @@
                     android:background="@drawable/rounded_spinner"
                     android:padding="8dp"
                     android:layout_marginBottom="16dp"
-                    android:entries="@array/outlook_options"/>
+                    android:entries="@array/outlook_options" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Alcohol Consumption"
+                    android:text="Konsumsi Alkohol?"
                     android:layout_marginBottom="4dp"
                     android:textSize="16sp" />
 
@@ -181,7 +184,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Country*"
+                    android:text="Negara*"
                     android:layout_marginBottom="4dp"
                     android:textSize="16sp" />
 
@@ -192,11 +195,12 @@
                     android:background="@drawable/rounded_spinner"
                     android:padding="8dp"
                     android:layout_marginBottom="16dp"
-                    android:entries="@array/country_options"/>
+                    android:entries="@array/country_options" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Level of Fitness"
+                    android:text="Level Kebugaran"
                     android:layout_marginBottom="4dp"
                     android:textSize="16sp" />
 
@@ -207,11 +211,12 @@
                     android:background="@drawable/rounded_spinner"
                     android:padding="8dp"
                     android:layout_marginBottom="16dp"
-                    android:entries="@array/fitness_levels"/>
+                    android:entries="@array/fitness_levels" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Diet Rating"
+                    android:text="Tingkat Diet"
                     android:layout_marginBottom="4dp"
                     android:textSize="16sp" />
 
@@ -222,7 +227,9 @@
                     android:background="@drawable/rounded_spinner"
                     android:padding="8dp"
                     android:layout_marginBottom="16dp"
-                    android:entries="@array/diet_ratings"/>
+                    android:entries="@array/diet_ratings" />
+
+                <!-- Output Texts -->
                 <TextView
                     android:id="@+id/outputText"
                     android:layout_width="match_parent"
@@ -233,10 +240,6 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="8dp"
                     android:background="@drawable/rounded_card"
-                    android:shadowColor="#888888"
-                    android:shadowDx="2"
-                    android:shadowDy="2"
-                    android:shadowRadius="4"
                     android:text="Output Text 1" />
 
                 <TextView
@@ -249,11 +252,9 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/rounded_card"
-                    android:shadowColor="#888888"
-                    android:shadowDx="2"
-                    android:shadowDy="2"
-                    android:shadowRadius="4"
                     android:text="Output Text 2" />
+
+                <!-- Send Button -->
                 <Button
                     android:id="@+id/sendButton"
                     android:layout_width="match_parent"
