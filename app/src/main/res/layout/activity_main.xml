@@ -17,7 +17,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Kalkulator Umur"
+            android:text="@string/kalkulator_umur"
             android:textColor="#1a1a1a"
             android:textSize="24sp"
             android:gravity="center"
@@ -41,7 +41,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Jelaskan Aktivitas Keseharianmu"
+                    android:text="@string/jelaskan_aktivitas_keseharianmu"
                     android:textSize="18sp"
                     android:layout_marginBottom="4dp"
                     android:textColor="#333333" />
@@ -50,7 +50,7 @@
                     android:id="@+id/inputText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Enter your message"
+                    android:hint="@string/masukkan_pesan_anda"
                     android:background="@drawable/rounded_edittext"
                     android:padding="12dp"
                     android:layout_marginBottom="16dp" />
@@ -59,7 +59,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tanggal Lahir*"
+                    android:text="@string/tanggal_lahir"
                     android:layout_marginBottom="4dp"
                     android:textSize="16sp"
                     android:textColor="#333333" />
@@ -75,7 +75,7 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:hint="Bulan"
+                        android:hint="@string/bulan"
                         android:background="@drawable/rounded_edittext"
                         android:padding="12dp"
                         android:layout_marginEnd="8dp" />
@@ -85,7 +85,7 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:hint="Hari"
+                        android:hint="@string/hari"
                         android:background="@drawable/rounded_edittext"
                         android:padding="12dp"
                         android:layout_marginEnd="8dp" />
@@ -95,7 +95,7 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:hint="Tahun"
+                        android:hint="@string/tahun"
                         android:background="@drawable/rounded_edittext"
                         android:padding="12dp" />
                 </LinearLayout>
@@ -104,7 +104,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Jenis Kelamin*"
+                    android:text="@string/jenis_kelamin"
                     android:layout_marginBottom="4dp"
                     android:textSize="16sp" />
 
@@ -120,7 +120,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Apakah Anda Merokok?"
+                    android:text="@string/apakah_anda_merokok"
                     android:layout_marginBottom="4dp"
                     android:textSize="16sp" />
 
@@ -136,7 +136,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="BMI*"
+                    android:text="@string/bmi"
                     android:layout_marginBottom="4dp"
                     android:textSize="16sp" />
 
@@ -152,7 +152,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Outlook"
+                    android:text="@string/outlook"
                     android:layout_marginBottom="4dp"
                     android:textSize="16sp" />
 
@@ -168,7 +168,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Konsumsi Alkohol?"
+                    android:text="@string/konsumsi_alkohol"
                     android:layout_marginBottom="4dp"
                     android:textSize="16sp" />
 
@@ -184,7 +184,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Negara*"
+                    android:text="@string/negara"
                     android:layout_marginBottom="4dp"
                     android:textSize="16sp" />
 
@@ -200,7 +200,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Level Kebugaran"
+                    android:text="@string/level_kebugaran"
                     android:layout_marginBottom="4dp"
                     android:textSize="16sp" />
 
@@ -216,7 +216,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tingkat Diet"
+                    android:text="@string/tingkat_diet"
                     android:layout_marginBottom="4dp"
                     android:textSize="16sp" />
 
@@ -240,7 +240,7 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="8dp"
                     android:background="@drawable/rounded_card"
-                    android:text="Output Text 1" />
+                    />
 
                 <TextView
                     android:id="@+id/outputText2"
@@ -251,15 +251,14 @@
                     android:textColor="#333333"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="10dp"
-                    android:background="@drawable/rounded_card"
-                    android:text="Output Text 2" />
+                    android:background="@drawable/rounded_card" />
 
                 <!-- Send Button -->
                 <Button
                     android:id="@+id/sendButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Send"
+                    android:text="@string/kirim"
                     android:background="@drawable/rounded_button"
                     android:textColor="#FFFFFF" />
 

@@ -16,7 +16,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Prediksi Penyakit Fisik"
+            android:text="@string/prediksi_penyakit_fisik"
             android:textColor="#1a1a1a"
             android:textSize="24sp"
             android:gravity="center"
@@ -47,7 +47,7 @@
                     android:id="@+id/inputText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Masukkan pesan Anda"
+                    android:hint="@string/masukkan_pesan_anda"
                     android:background="@drawable/rounded_edittext"
                     android:padding="12dp"
                     android:layout_marginBottom="16dp" />
@@ -56,7 +56,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Seberapa sering Anda merasa kelelahan?"
+                    android:text="@string/seberapa_sering_anda_merasa_kelelahan"
                     android:textSize="16sp"
                     android:textColor="#333333"
                     android:layout_marginBottom="4dp" />
@@ -72,7 +72,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Seberapa parah nyeri yang Anda rasakan?"
+                    android:text="@string/seberapa_parah_nyeri_yang_anda_rasakan"
                     android:textSize="16sp"
                     android:textColor="#333333"
                     android:layout_marginBottom="4dp" />
@@ -88,7 +88,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Seberapa sering Anda merasa mual?"
+                    android:text="@string/seberapa_sering_anda_merasa_mual"
                     android:textSize="16sp"
                     android:textColor="#333333"
                     android:layout_marginBottom="4dp"/>
@@ -104,7 +104,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Seberapa sering Anda merasa sesak napas?"
+                    android:text="@string/seberapa_sering_anda_merasa_sesak_napas"
                     android:textSize="16sp"
                     android:textColor="#333333"
                     android:layout_marginBottom="4dp" />
@@ -120,7 +120,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Seberapa sering Anda merasa pusing?"
+                    android:text="@string/seberapa_sering_anda_merasa_pusing"
                     android:textSize="16sp"
                     android:textColor="#333333"
                     android:layout_marginBottom="4dp" />
@@ -136,7 +136,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Seberapa besar kehilangan nafsu makan yang Anda alami?"
+                    android:text="@string/seberapa_besar_kehilangan_nafsu_makan_yang_anda_alami"
                     android:textSize="16sp"
                     android:textColor="#333333"
                     android:layout_marginBottom="4dp" />
@@ -152,7 +152,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Seberapa lemah Anda merasa?"
+                    android:text="@string/seberapa_lemah_anda_merasa"
                     android:textSize="16sp"
                     android:textColor="#333333"
                     android:layout_marginBottom="4dp" />
@@ -169,7 +169,7 @@
                     android:id="@+id/sendButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Kirim"
+                    android:text="@string/kirim"
                     android:background="@drawable/rounded_button"
                     android:textColor="#FFFFFF"
                     android:layout_marginTop="16dp" />
@@ -190,7 +190,7 @@
                     android:id="@+id/outputText2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Algorithm Output"
+                    android:text="@string/hasil_algoritma"
                     android:layout_marginTop="16dp"
                     android:textSize="16sp"/>
             </LinearLayout>

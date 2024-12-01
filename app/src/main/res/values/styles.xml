@@ -4,5 +4,13 @@
         <item name="android:progressDrawable">@drawable/seekbar_track</item>
         <item name="android:thumb">@drawable/seekbar_thumb</item>
     </style>
+    <style name="SeekBarTextStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#333333</item>
+        <item name="android:layout_marginTop">16dp</item>
+    </style>
+    <style name="RadioButtonTextStyle">
+        <item name="android:textSize">18sp</item>
+    </style>
 
 </resources>
