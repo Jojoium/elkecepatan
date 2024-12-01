@@ -73,11 +73,11 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        val gotoActivity2Button: Button = findViewById(R.id.gotoActivity2Button)
-        gotoActivity2Button.setOnClickListener {
-            val intent = Intent(this, MainActivity2::class.java)
-            startActivity(intent)
-        }
+//        val gotoActivity2Button: Button = findViewById(R.id.gotoActivity2Button)
+//        gotoActivity2Button.setOnClickListener {
+//            val intent = Intent(this, MainActivity2::class.java)
+//            startActivity(intent)
+//        }
     }
 
     fun updateOutputText(content: String) {

@@ -1,154 +1,209 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity2"
-    android:fillViewport="true">
+    android:background="#FEF8F8">
 
+    <!-- Layout utama -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="16dp">
 
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Prediksi Penyakit Fisik"
+            android:textColor="#1a1a1a"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
 
         <TextView
             android:id="@+id/welcomeTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:padding="8dp" />
-
-
-        <EditText
-            android:id="@+id/inputText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Masukkan pesan Anda"
-            android:padding="12dp"
             android:layout_marginBottom="10dp"
-            android:background="@android:drawable/editbox_background" />
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Seberapa sering Anda merasa kelelahan?"
-            android:layout_marginTop="10dp" />
-        <SeekBar
-            android:id="@+id/fatigueSeekBar"
+            android:padding="8dp"
+            android:textSize="18sp" />
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:max="4" />
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="50dp"
+            android:overScrollMode="ifContentScrolls">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Seberapa parah nyeri yang Anda rasakan?"
-            android:layout_marginTop="10dp" />
-        <SeekBar
-            android:id="@+id/painSeekBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:max="4" />
+                <EditText
+                    android:id="@+id/inputText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Masukkan pesan Anda"
+                    android:background="@drawable/rounded_edittext"
+                    android:padding="12dp"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- SeekBar untuk Gejala -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Seberapa sering Anda merasa kelelahan?"
+                    android:textSize="16sp"
+                    android:textColor="#333333"
+                    android:layout_marginBottom="4dp" />
+
+                <SeekBar
+                    android:id="@+id/fatigueSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="4"
+                    android:layout_marginBottom="16dp"
+                    style="@style/CustomSeekBar" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Seberapa parah nyeri yang Anda rasakan?"
+                    android:textSize="16sp"
+                    android:textColor="#333333"
+                    android:layout_marginBottom="4dp" />
+                <SeekBar
+                    android:id="@+id/painSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="4"
+                    android:layout_marginBottom="16dp"
+                    style="@style/CustomSeekBar"/>
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Seberapa sering Anda merasa mual?"
-            android:layout_marginTop="10dp" />
-        <SeekBar
-            android:id="@+id/nauseaSeekBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:max="4" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Seberapa sering Anda merasa mual?"
+                    android:textSize="16sp"
+                    android:textColor="#333333"
+                    android:layout_marginBottom="4dp"/>
+                <SeekBar
+                    android:id="@+id/nauseaSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="4"
+                    android:layout_marginBottom="16dp"
+                    style="@style/CustomSeekBar"/>
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Seberapa sering Anda merasa sesak napas?"
-            android:layout_marginTop="10dp" />
-        <SeekBar
-            android:id="@+id/breathSeekBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:max="4" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Seberapa sering Anda merasa sesak napas?"
+                    android:textSize="16sp"
+                    android:textColor="#333333"
+                    android:layout_marginBottom="4dp" />
+                <SeekBar
+                    android:id="@+id/breathSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="4"
+                    android:layout_marginBottom="16dp"
+                    style="@style/CustomSeekBar"/>
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Seberapa sering Anda merasa pusing?"
-            android:layout_marginTop="10dp" />
-        <SeekBar
-            android:id="@+id/dizzinessSeekBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:max="4" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Seberapa sering Anda merasa pusing?"
+                    android:textSize="16sp"
+                    android:textColor="#333333"
+                    android:layout_marginBottom="4dp" />
+                <SeekBar
+                    android:id="@+id/dizzinessSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="4"
+                    android:layout_marginBottom="16dp"
+                    style="@style/CustomSeekBar"/>
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Seberapa besar kehilangan nafsu makan yang Anda alami?"
-            android:layout_marginTop="10dp" />
-        <SeekBar
-            android:id="@+id/appetiteSeekBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:max="4" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Seberapa besar kehilangan nafsu makan yang Anda alami?"
+                    android:textSize="16sp"
+                    android:textColor="#333333"
+                    android:layout_marginBottom="4dp" />
+                <SeekBar
+                    android:id="@+id/appetiteSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="4"
+                    android:layout_marginBottom="16dp"
+                    style="@style/CustomSeekBar"/>
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Seberapa lemah Anda merasa?"
-            android:layout_marginTop="10dp" />
-        <SeekBar
-            android:id="@+id/weaknessSeekBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:max="4" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Seberapa lemah Anda merasa?"
+                    android:textSize="16sp"
+                    android:textColor="#333333"
+                    android:layout_marginBottom="4dp" />
+                <SeekBar
+                    android:id="@+id/weaknessSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="4"
+                    android:layout_marginBottom="16dp"
+                    style="@style/CustomSeekBar"/>
 
+                <!-- Tombol Kirim -->
+                <Button
+                    android:id="@+id/sendButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kirim"
+                    android:background="@drawable/rounded_button"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="16dp" />
 
-        <Button
-            android:id="@+id/sendButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Kirim"
-            android:layout_marginTop="16dp" />
+                <!-- Output Text -->
+                <TextView
+                    android:id="@+id/outputText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:textSize="16sp"
+                    android:textColor="#333333"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/rounded_card"
+                     />
 
-
-        <TextView
-            android:id="@+id/outputText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="12dp"
-            android:textSize="18sp"
-            android:textColor="#000"
-            android:layout_marginTop="20dp"
-            android:background="#f0f0f0" />
-
-        <TextView
-            android:id="@+id/outputText2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Algorithm Output"
-            android:layout_marginTop="16dp"
-            android:textSize="16sp"/>
-
-        <Button
-            android:id="@+id/gotoActivity3Button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Go to Activity 3"
-            android:layout_marginTop="8dp" />
-
-
-
+                <TextView
+                    android:id="@+id/outputText2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Algorithm Output"
+                    android:layout_marginTop="16dp"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
-</ScrollView>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom"
+        android:background="#FFFFFF"
+        app:menu="@menu/bottom_nav_menu"
+        android:elevation="4dp" />
+</FrameLayout>

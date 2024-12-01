@@ -1,0 +1,13 @@
+<!-- res/drawable/edittext_border.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FFFFFF" /> <!-- Warna latar belakang -->
+    <stroke
+        android:width="2dp"
+        android:color="#000000" /> <!-- Warna garis -->
+    <corners android:radius="8dp" /> <!-- Radius sudut -->
+    <padding
+        android:left="8dp"
+        android:right="8dp"
+        android:top="8dp"
+        android:bottom="8dp" /> <!-- Padding di dalam kotak -->
+</shape>

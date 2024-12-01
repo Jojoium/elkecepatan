@@ -53,6 +53,8 @@ android {
 dependencies {
     implementation ("com.squareup.okhttp3:okhttp:4.9.0")
     implementation ("org.json:json:20201115")
+    implementation ("com.google.android.material:material:1.9.0")
+
     implementation(platform("com.google.firebase:firebase-bom:33.5.1"))
     implementation("com.google.firebase:firebase-analytics")
     implementation("androidx.core:core-ktx:1.13.1")

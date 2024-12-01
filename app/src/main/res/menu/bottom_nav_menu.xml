@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/kalkulator_umur"
+        android:icon="@drawable/kalkulator_umur"
+        android:title="Kalkulator Umur" />
+    <item
+        android:id="@+id/prediksi_penyakit_fisik"
+        android:icon="@drawable/prediksi_penyakit"
+        android:title="Prediksi Penyakit Fisik" />
+    <item
+        android:id="@+id/prediksi_penyakit_mental"
+        android:icon="@drawable/prediksi_penyakit_mental"
+        android:title="Prediksi Penyakit Mental" />
+    <item
+        android:id="@+id/kalkulator_bmi"
+        android:icon="@drawable/kalkulator_bmi"
+        android:title="Kalkulator BMI" />
+</menu>
