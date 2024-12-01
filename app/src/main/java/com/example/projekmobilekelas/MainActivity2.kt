@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -105,6 +106,30 @@ class MainActivity2 : AppCompatActivity() {
             welcomeTextView.text = "Selamat datang, Pengguna!"
             Toast.makeText(this, "Pengguna tidak login", Toast.LENGTH_SHORT).show()
         }
+
+        // Set up BottomNavigationView
+        val bottomNavigation: BottomNavigationView = findViewById(R.id.bottomNavigationView)
+        bottomNavigation.setOnNavigationItemSelectedListener { item ->
+            if (bottomNavigation.selectedItemId != item.itemId) {
+                when (item.itemId) {
+                    R.id.kalkulator_umur -> {
+                        startActivity(Intent(this, MainActivity::class.java))
+                        finish()
+                    }
+                    R.id.kalkulator_bmi -> {
+                        startActivity(Intent(this, BMICalculatorActivity::class.java))
+                        finish()
+                    }
+
+                    R.id.prediksi_penyakit_mental -> {
+                        startActivity(Intent(this, MainActivity3::class.java))
+                        finish()
+                    }
+                }
+
+            }
+            true
+        }
     }
 
     private fun displayAlgorithmResult(scores: Map<String, Int>) {
@@ -115,4 +140,6 @@ class MainActivity2 : AppCompatActivity() {
 
         outputText2.text = "Kemungkinan kondisi: $condition\nTingkat Kepercayaan: ${confidence.toInt()}%"
     }
+
+
 }

@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
@@ -78,6 +79,31 @@ class MainActivity : AppCompatActivity() {
 //            val intent = Intent(this, MainActivity2::class.java)
 //            startActivity(intent)
 //        }
+        // Set up BottomNavigationView
+        val bottomNavigation: BottomNavigationView = findViewById(R.id.bottomNavigationView)
+        bottomNavigation.setOnNavigationItemSelectedListener { item ->
+            if (bottomNavigation.selectedItemId != item.itemId) {
+                when (item.itemId) {
+
+                    R.id.kalkulator_bmi -> {
+                        startActivity(Intent(this, BMICalculatorActivity::class.java))
+                        finish()
+                    }
+                    R.id.prediksi_penyakit_fisik -> {
+                        val intent = Intent(this, MainActivity2::class.java)
+                        startActivity(intent)
+                        finish() // Finish current activity to avoid overlapping
+                    }
+                    R.id.prediksi_penyakit_mental -> {
+                        startActivity(Intent(this, MainActivity3::class.java))
+                        finish()
+                    }
+
+                }
+
+            }
+            true
+        }
     }
 
     fun updateOutputText(content: String) {
@@ -87,4 +113,7 @@ class MainActivity : AppCompatActivity() {
     fun updateOutputText2(content: String) {
         outputText2.text = content
     }
+    
+    
+    
 }
