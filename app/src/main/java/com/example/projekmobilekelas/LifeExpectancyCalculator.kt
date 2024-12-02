@@ -39,7 +39,7 @@ class LifeExpectancyCalculator {
                     )
                     put(
                         "content",
-                        "Based on these factors: Date of birth: $birthMonth/$birthDay/$birthYear, Sex: $sex, Smoking: $smoking, BMI: $bmi, Outlook: $outlook, Alcohol: $alcohol, Country: $country, Fitness: $fitness, Diet: $diet. Activity description: $userInput, please provide feedback and suggestions for a healthier lifestyle."
+                        "Berdasarkan faktor-faktor berikut: Tanggal Lahir: $birthMonth/$birthDay/$birthYear, Jenis Kelamin: $sex, Kebiasaan Merokok: $smoking, BMI: $bmi, Pandangan Hidup: $outlook, Konsumsi Alkohol: $alcohol, Negara: $country, Kebugaran: $fitness, Pola Makan: $diet. Deskripsi Aktivitas: $userInput, berikan masukan dan saran untuk gaya hidup yang lebih sehat."
                     )
                 }
                 put(message)

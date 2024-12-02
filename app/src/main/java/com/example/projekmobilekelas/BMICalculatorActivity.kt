@@ -1,11 +1,14 @@
-package com.example.bmi
+package com.example.projekmobilekelas
 
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.example.projekmobilekelas.R
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class MainActivity : AppCompatActivity() {
+class BMICalculatorActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,6 +37,34 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Please enter valid height and weight", Toast.LENGTH_SHORT).show()
             }
         }
+        // Set up BottomNavigationView
+        val bottomNavigation: BottomNavigationView = findViewById(R.id.bottomNavigationView)
+        bottomNavigation.setOnNavigationItemSelectedListener { item ->
+            if (bottomNavigation.selectedItemId != item.itemId) {
+                when (item.itemId) {
+                    R.id.kalkulator_umur -> {
+                        startActivity(Intent(this, MainActivity::class.java))
+                        finish()
+                    }
+
+                    R.id.prediksi_penyakit_fisik -> {
+                        val intent = Intent(this, MainActivity2::class.java)
+                        startActivity(intent)
+                        finish() // Finish current activity to avoid overlapping
+                    }
+                    R.id.prediksi_penyakit_mental -> {
+                        startActivity(Intent(this, MainActivity3::class.java))
+                        finish()
+                    }
+                    else -> false
+                }
+
+            }
+            true
+        }
+
+        // Highlight kalkulator_umur
+        bottomNavigation.selectedItemId = R.id.kalkulator_bmi
     }
 
     private fun calculateBMI(height: Double, weight: Double): Double {
@@ -50,5 +81,6 @@ class MainActivity : AppCompatActivity() {
             bmi < 39.9 -> "Obesity class II"
             else -> "Obesity class III"
         }
+
     }
 }

@@ -6,7 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".SignUpActivity">
 
     <TextView
         android:id="@+id/tvHeader"
@@ -14,51 +14,48 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
         android:layout_marginStart="20dp"
-        android:text="@string/app_name"
-        android:textSize="40sp"
-        android:textStyle="bold"
+        android:text="@string/daftar"
         android:textColor="@color/black"
+        android:textSize="35sp"
+        android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-         />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/tvSignUp"
+        android:id="@+id/tvSignIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginStart="20dp"
-        android:text="@string/belum_punya_akun_daftar"
+        android:text="@string/sudah_punya_akun_masuk"
         android:textColor="@android:color/holo_blue_light"
         android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@id/tvHeader"
-        app:layout_constraintStart_toStartOf="parent"
-         />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="350dp"
+        android:layout_height="300dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
         android:src="@drawable/icon_lifeai"
-        app:layout_constraintTop_toBottomOf="@id/tvSignUp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintDimensionRatio="H,1:1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintDimensionRatio="H,1:1" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSignIn" />
 
     <EditText
-        android:id="@+id/etEmail"
+        android:id="@+id/etUsername"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="@string/masukkan_email_anda"
-        android:inputType="textEmailAddress"
-        android:padding="12dp"
+        android:hint="@string/masukkan_username_anda"
+        android:inputType="textPersonName"
+        android:padding="16dp"
+        android:background="@drawable/edittext_border"
         android:textColor="@color/black"
         android:textSize="16sp"
-        android:background="@drawable/edittext_border"
         app:layout_constraintTop_toBottomOf="@id/imageView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,15 +64,32 @@
         android:layout_marginTop="12dp" />
 
     <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/masukkan_email_anda"
+        android:inputType="textEmailAddress"
+        android:padding="16dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:background="@drawable/edittext_border"
+        app:layout_constraintTop_toBottomOf="@id/etUsername"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp" />
+
+    <EditText
         android:id="@+id/etPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="@string/masukkan_password_anda"
         android:inputType="textPassword"
-        android:padding="12dp"
+        android:padding="16dp"
+        android:background="@drawable/edittext_border"
         android:textColor="@color/black"
         android:textSize="16sp"
-        android:background="@drawable/edittext_border"
         app:layout_constraintTop_toBottomOf="@id/etEmail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,16 +97,15 @@
         android:layout_marginEnd="16dp"
         android:layout_marginTop="8dp" />
 
-
     <Button
-        android:id="@+id/btnlogin"
+        android:id="@+id/btndaftar"
         android:layout_width="351dp"
         android:layout_height="65dp"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/rounded_button"
-        android:text="@string/login"
+        android:text="@string/daftar"
         android:textSize="20sp"
         android:textColor="@color/white"
         android:gravity="center"

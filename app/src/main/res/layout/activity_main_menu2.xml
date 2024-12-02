@@ -1,0 +1,94 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_layers"
+    android:padding="16dp">
+
+
+
+    <!-- BMI Calculator Button -->
+    <Button
+        android:id="@+id/btn_bmi_calculator"
+        android:layout_width="338dp"
+        android:layout_height="wrap_content"
+        android:text="BMI Calculator"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:textSize="20sp"
+        android:background="@drawable/buttons"
+        />
+
+    <!-- Disease Prediction Button -->
+    <Button
+
+        android:id="@+id/btn_disease_prediction"
+        android:textSize="20sp"
+        android:layout_width="338dp"
+        android:layout_height="wrap_content"
+        android:text="Disease Prediction"
+        app:layout_constraintTop_toBottomOf="@id/btn_bmi_calculator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:background="@drawable/buttons"
+        />
+
+    <!-- Life Expectancy Calculator Button -->
+    <Button
+
+        android:id="@+id/btn_life_expectancy"
+        android:layout_width="338dp"
+        android:textSize="20sp"
+        android:layout_height="wrap_content"
+        android:text="Life Expectancy Calculator"
+        android:background="@drawable/buttons"
+        app:layout_constraintTop_toBottomOf="@id/btn_disease_prediction"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        />
+
+    <!-- Mental Disorder Prediction Button -->
+    <Button
+        android:id="@+id/btn_mental_disorder_prediction"
+        android:layout_width="338dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Mental Disorder Prediction"
+        android:background="@drawable/buttons"
+        app:layout_constraintTop_toBottomOf="@id/btn_life_expectancy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        />
+
+    <!-- Logout Button -->
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="338dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttons"
+        android:text="Log Out"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_mental_disorder_prediction" />
+
+    <ImageView
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        android:id="@+id/logo"
+        android:layout_width="376dp"
+        android:layout_height="350dp"
+        app:srcCompat="@drawable/icon_lifeai"
+        tools:layout_editor_absoluteX="-1dp"
+        tools:layout_editor_absoluteY="29dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

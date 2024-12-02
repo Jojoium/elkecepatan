@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "760797362409",
+    "project_id": "elkecepatan-62865",
+    "storage_bucket": "elkecepatan-62865.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:760797362409:android:5615fb9fc475a842c61878",
+        "android_client_info": {
+          "package_name": "com.example.projekmobilekelas"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWcgirIUOggI98sVQsYQeNqmUUYb8argc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
