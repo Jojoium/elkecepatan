@@ -25,6 +25,7 @@
 
     <!-- Disease Prediction Button -->
     <Button
+
         android:id="@+id/btn_disease_prediction"
         android:textSize="20sp"
         android:layout_width="338dp"

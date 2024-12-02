@@ -130,12 +130,14 @@ class MainActivity3 : AppCompatActivity() {
                         startActivity(intent)
                         finish() // Finish current activity to avoid overlapping
                     }
-
+                    else -> false
                 }
 
             }
             true
         }
 
+        // Highlight kalkulator_umur
+        bottomNavigation.selectedItemId = R.id.prediksi_penyakit_mental
     }
 }

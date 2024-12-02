@@ -125,11 +125,16 @@ class MainActivity2 : AppCompatActivity() {
                         startActivity(Intent(this, MainActivity3::class.java))
                         finish()
                     }
+                    else -> false
                 }
 
             }
+
             true
         }
+
+        // Highlight kalkulator_umur
+        bottomNavigation.selectedItemId = R.id.prediksi_penyakit_fisik
     }
 
     private fun displayAlgorithmResult(scores: Map<String, Int>) {

@@ -74,17 +74,11 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-//        val gotoActivity2Button: Button = findViewById(R.id.gotoActivity2Button)
-//        gotoActivity2Button.setOnClickListener {
-//            val intent = Intent(this, MainActivity2::class.java)
-//            startActivity(intent)
-//        }
         // Set up BottomNavigationView
         val bottomNavigation: BottomNavigationView = findViewById(R.id.bottomNavigationView)
         bottomNavigation.setOnNavigationItemSelectedListener { item ->
             if (bottomNavigation.selectedItemId != item.itemId) {
                 when (item.itemId) {
-
                     R.id.kalkulator_bmi -> {
                         startActivity(Intent(this, BMICalculatorActivity::class.java))
                         finish()
@@ -92,18 +86,20 @@ class MainActivity : AppCompatActivity() {
                     R.id.prediksi_penyakit_fisik -> {
                         val intent = Intent(this, MainActivity2::class.java)
                         startActivity(intent)
-                        finish() // Finish current activity to avoid overlapping
+                        finish()
                     }
                     R.id.prediksi_penyakit_mental -> {
                         startActivity(Intent(this, MainActivity3::class.java))
                         finish()
                     }
-
+                    else -> false
                 }
-
             }
             true
         }
+
+        // Highlight kalkulator_umur
+        bottomNavigation.selectedItemId = R.id.kalkulator_umur
     }
 
     fun updateOutputText(content: String) {
@@ -113,7 +109,4 @@ class MainActivity : AppCompatActivity() {
     fun updateOutputText2(content: String) {
         outputText2.text = content
     }
-    
-    
-    
 }

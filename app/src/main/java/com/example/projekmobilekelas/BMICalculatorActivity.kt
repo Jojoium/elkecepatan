@@ -56,12 +56,15 @@ class BMICalculatorActivity : AppCompatActivity() {
                         startActivity(Intent(this, MainActivity3::class.java))
                         finish()
                     }
+                    else -> false
                 }
 
             }
             true
         }
 
+        // Highlight kalkulator_umur
+        bottomNavigation.selectedItemId = R.id.kalkulator_bmi
     }
 
     private fun calculateBMI(height: Double, weight: Double): Double {
